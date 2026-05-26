@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "Touching Lives Prayer",
+    "slug": "touching-lives-prayer",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "touchinglives",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a1a2e"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTabletMode": true,
+      "requireFullScreen": true,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "We need microphone access to record your prayers and analyze prayer momentum.",
+        "NSLocationWhenInUseUsageDescription": "We use your location to display you on the Global Fire Map with other believers praying worldwide."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1a1a2e"
+      },
+      "permissions": [
+        "RECORD_AUDIO",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "VIBRATE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow Touching Lives to access your microphone."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Touching Lives to access your location."
+        }
+      ]
+    ]
+  }
+}
